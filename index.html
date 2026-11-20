@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宝可梦 · 卡牌远征</title>
+  <link rel="stylesheet" href="css/style.css?v=12">
+</head>
+<body>
+  <div id="game-container">
+    <div id="title-screen" class="screen active"></div>
+    <div id="select-screen" class="screen"></div>
+    <div id="map-screen" class="screen"></div>
+    <div id="battle-screen" class="screen"></div>
+    <div id="reward-screen" class="screen"></div>
+    <div id="shop-screen" class="screen"></div>
+    <div id="rest-screen" class="screen"></div>
+    <div id="event-screen" class="screen"></div>
+    <div id="relic-screen" class="screen"></div>
+    <div id="gameover-screen" class="screen"></div>
+    <div id="victory-screen" class="screen"></div>
+  </div>
+
+  <script>
+    window.addEventListener('error', function (e) {
+      var box = document.createElement('div');
+      box.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#3a0d18;color:#ffd0d8;padding:16px 20px;font:13px/1.6 Consolas,monospace;border-top:2px solid #ff5d5d;white-space:pre-wrap;';
+      box.textContent = '脚本错误: ' + (e.message || e.error) + '\n' + (e.filename || '') + ':' + (e.lineno || '');
+      document.body.appendChild(box);
+    });
+  </script>
+  <script src="bundle.js?v=12"></script>
+</body>
+</html>
